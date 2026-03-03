@@ -1,0 +1,105 @@
+/* NavBar Component Styles */
+/* ===== NAVBAR BASE ===== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #0e1016;
+  color: white;
+  z-index: 1000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar--scrolled {
+  background-color: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* ===== DESKTOP LINKS ===== */
+
+.navbar__links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.navbar__link:hover {
+  color: #00bcd4;
+}
+
+/* Link activo (NavLink lo agrega automáticamente) */
+.navbar__link.active {
+  color: #00bcd4;
+  font-weight: bold;
+}
+
+/* ===== BOTÓN MOBILE ===== */
+
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== MOBILE MENU ===== */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  background-color: #1c1c1c;
+  padding: 80px 30px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu__list {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu__list li {
+  margin-bottom: 25px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+}
