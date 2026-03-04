@@ -1,0 +1,188 @@
+/* ===== CONTACT ===== */
+
+.contact {
+  padding: 140px 20px;
+}
+
+.contact__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.contact__subtitle {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d4af37;
+}
+
+.contact__title {
+  margin-top: 20px;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.contact__highlight {
+  background: linear-gradient(90deg, #d4af37, #f5e6b3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact__description {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #cfcfcf;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== CARD ===== */
+
+.contact__card {
+  border-radius: 20px;
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+.contact__card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.1);
+}
+
+/* ===== CONTACT LINKS ===== */
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 15px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  text-decoration: none;
+  color: white;
+
+  transition: all 0.3s ease;
+}
+
+.contact__item:hover {
+  border-color: #d4af37;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.contact__icon {
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+}
+
+.contact__arrow {
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact__item:hover .contact__arrow {
+  opacity: 1;
+}
+
+/* ===== SOCIAL ===== */
+
+.contact__social {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 25px;
+  text-align: center;
+}
+
+.contact__social p {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.contact__social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* BASE SOCIAL ICON */
+
+.contact__social-icon {
+  height: 50px;
+  width: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #aaa;
+
+  transition: all 0.3s ease;
+}
+
+/* ===== GITHUB OFFICIAL ===== */
+
+.contact__social-icon.github:hover {
+  color: #ffffff;
+  background: #181717;
+  border-color: #181717;
+}
+
+/* ===== LINKEDIN OFFICIAL ===== */
+
+.contact__social-icon.linkedin:hover {
+  color: #ffffff;
+  background: #0a66c2;
+  border-color: #0a66c2;
+  box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .contact__card {
+    padding: 25px;
+  }
+
+  .contact__title {
+    font-size: 34px;
+  }
+}
