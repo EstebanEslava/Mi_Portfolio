@@ -43,7 +43,7 @@ const Hero = () => {
           <a href="#contact" className="btn-primary">
             Hablemos
           </a>
-          <a href="#projects" className="btn-secondary">
+          <a href="#projects" className="btn-primary">
             Ver proyectos
           </a>
         </motion.div>

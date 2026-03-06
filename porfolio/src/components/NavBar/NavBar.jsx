@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { Menu, X, Download } from "lucide-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
-    { label: "Inicio", path: "/" },
-    { label: "Sobre mí", path: "/about" },
-    { label: "Habilidades", path: "/skills" },
-    { label: "Proyectos", path: "/projects" },
-    { label: "Experiencia", path: "/experience" },
-    { label: "Contacto", path: "/contact" },
+    { label: "Inicio", href: "#hero" },
+    { label: "Sobre mí", href: "#about" },
+    { label: "Habilidades", href: "#skills" },
+    { label: "Proyectos", href: "#projects" },
+    { label: "Experiencia", href: "#experience" },
+    { label: "Contacto", href: "#contact" },
   ];
 
   useEffect(() => {
@@ -30,32 +29,37 @@ function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="navbar__container">
-        <div className="navbar__logo">EE.</div>
+        {/* LOGO */}
+        <div className="navbar__logo">
+          <a href="#hero">EE.</a>
+        </div>
 
-        {/* Toggle */}
-        <button className="navbar__toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-
-        {/* Desktop */}
+        {/* LINKS */}
         <ul className="navbar__links">
           {navItems.map((item) => (
-            <li key={item.path}>
-              <NavLink
-                to={item.path}
-                end={item.path === "/"}
-                className={({ isActive }) =>
-                  isActive ? "navbar__link active" : "navbar__link"
-                }
-              >
+            <li key={item.href}>
+              <a href={item.href} className="navbar__link">
                 {item.label}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>
+
+        {/* BOTÓN CV */}
+        <div className="navbar__actions">
+          <a href="/CV_ESTEBAN_ESLAVA.pdf" download className="navbar__cv">
+            <Download size={18} />
+            Descargar CV
+          </a>
+        </div>
+
+        {/* MOBILE TOGGLE */}
+        <button className="navbar__toggle" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </div>
 
-      {/* Mobile */}
+      {/* MOBILE MENU */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -67,17 +71,14 @@ function Navbar() {
           >
             <ul>
               {navItems.map((item) => (
-                <li key={item.path}>
-                  <NavLink
-                    to={item.path}
-                    end={item.path === "/"}
+                <li key={item.href}>
+                  <a
+                    href={item.href}
                     onClick={handleClose}
-                    className={({ isActive }) =>
-                      isActive ? "navbar__link active" : "navbar__link"
-                    }
+                    className="navbar__link"
                   >
                     {item.label}
-                  </NavLink>
+                  </a>
                 </li>
               ))}
             </ul>

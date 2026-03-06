@@ -23,7 +23,7 @@ const contactLinks = [
   {
     icon: MapPin,
     label: "Cali, Colombia",
-    href: "#",
+    href: "https://www.google.com/maps/place/Cali,+Valle+del+Cauca/@3.3952901,-76.6080659,12z/data=!3m1!4b1!4m6!3m5!1s0x8e30a6f0cc4bb3f1:0x1f0fb5e952ae6168!8m2!3d3.4516467!4d-76.5319854!16zL20vMDFwc3Nm?entry=ttu&g_ep=EgoyMDI2MDMwMi4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -67,7 +67,13 @@ const ContactSection = () => {
         >
           <div className="contact__links">
             {contactLinks.map(({ icon: Icon, label, href }) => (
-              <a key={label} href={href} className="contact__item">
+              <a
+                key={label}
+                href={href}
+                className="contact__item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="contact__icon">
                   <Icon size={18} />
                 </div>
