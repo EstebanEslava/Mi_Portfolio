@@ -50,6 +50,7 @@ const Hero = () => {
 
         <motion.div className="hero-socials" variants={itemVariants}>
           <a
+            className="hero__social-icon github"
             href="https://github.com/EstebanEslava"
             target="_blank"
             rel="noreferrer"
@@ -57,13 +58,19 @@ const Hero = () => {
             <Github size={20} />
           </a>
           <a
+            className="hero__social-icon linkedin"
             href="https://linkedin.com/in/esteban-eslava"
             target="_blank"
             rel="noreferrer"
           >
             <Linkedin size={20} />
           </a>
-          <a href="mailto:m.esteban.eslava@gmail.com">
+          <a
+            className="hero__social-icon gmail"
+            href="mailto:m.esteban.eslava@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Mail size={20} />
           </a>
         </motion.div>

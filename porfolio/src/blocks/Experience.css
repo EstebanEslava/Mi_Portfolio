@@ -1,21 +1,22 @@
 /* ===== EXPERIENCE SECTION ===== */
 
 .experience {
-  padding: 140px 20px;
+  padding: 120px 20px;
 }
 
 .experience__container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 /* ===== HEADER ===== */
 
 .experience__header {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .experience__subtitle {
+  font-family: "jetbrains mono", monospace;
   font-size: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -103,6 +104,7 @@
 }
 
 .experience__period {
+  font-family: "jetbrains mono", monospace;
   font-size: 12px;
   color: #d4af37;
   letter-spacing: 1px;

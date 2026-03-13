@@ -5,6 +5,7 @@ import { Menu, X, Download } from "lucide-react";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("hero");
 
   const navItems = [
     { label: "Inicio", href: "#hero" },
@@ -21,7 +22,32 @@ function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    const sections = navItems.map((item) => document.querySelector(item.href));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(`#${entry.target.id}`);
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+      },
+    );
+
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      sections.forEach((section) => {
+        if (section) observer.unobserve(section);
+      });
+    };
   }, []);
 
   const handleClose = () => setIsOpen(false);
@@ -38,7 +64,11 @@ function Navbar() {
         <ul className="navbar__links">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} className="navbar__link">
+              <a
+                href={item.href}
+                className={`navbar__link ${active === item.href ? "active" : ""}`}
+                onClick={() => setActive(item.href)}
+              >
                 {item.label}
               </a>
             </li>
@@ -74,8 +104,11 @@ function Navbar() {
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    onClick={handleClose}
-                    className="navbar__link"
+                    className={`navbar__link ${active === item.href ? "active" : ""}`}
+                    onClick={() => {
+                      setActive(item.href);
+                      handleClose();
+                    }}
                   >
                     {item.label}
                   </a>

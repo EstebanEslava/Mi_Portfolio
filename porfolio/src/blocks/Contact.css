@@ -17,6 +17,7 @@
 }
 
 .contact__subtitle {
+  font-family: "jetbrains mono", monospace;
   font-size: 12px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -163,7 +164,7 @@
 .contact__social-icon.github:hover {
   color: #ffffff;
   background: #181717;
-  border-color: #181717;
+  border-color: #d4af37;
 }
 
 /* ===== LINKEDIN OFFICIAL ===== */

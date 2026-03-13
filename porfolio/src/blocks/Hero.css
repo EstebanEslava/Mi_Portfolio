@@ -70,7 +70,7 @@
 .btn-secondary {
   padding: 12px 28px;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -81,7 +81,8 @@
 }
 
 .btn-primary:hover {
-  transform: scale(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 .btn-secondary {
@@ -114,6 +115,26 @@
 .hero-socials a:hover {
   border-color: #d4af37;
   transform: scale(1.1);
+}
+
+.hero__social-icon.github:hover {
+  color: #ffffff;
+  background: #181717;
+  border-color: #d4af37;
+}
+
+.hero__social-icon.linkedin:hover {
+  color: #ffffff;
+  background: #0a66c2;
+  border-color: #0a66c2;
+  box-shadow: 0 0 20px rgba(10, 102, 194, 0.4);
+}
+
+.hero__social-icon.gmail:hover {
+  color: #ffffff;
+  background: #ea4335;
+  border-color: #ea4335;
+  box-shadow: 0 0 20px rgba(234, 67, 53, 0.4);
 }
 
 .hero-scroll {

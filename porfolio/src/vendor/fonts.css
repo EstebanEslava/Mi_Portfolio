@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "playfair display";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/PlayfairDisplay-Regular.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: "playfair display";
+  font-style: normal;
+  font-weight: 900;
+  src: url(./fonts/PlayfairDisplay-Bold.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: "playfair display";
+  font-style: normal;
+  font-weight: 900;
+  src: url(./fonts/PlayfairDisplay-Black.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url(./fonts/Inter-Black.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/Inter-Regular.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: "jetbrains mono";
+  font-style: normal;
+  font-weight: 900;
+  src: url(./fonts/JetBrainsMono-Bold.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: "jetbrains mono";
+  font-style: normal;
+  font-weight: 900;
+  src: url(./fonts/JetBrainsMono-Regular.woff2) format(woff2);
+}
