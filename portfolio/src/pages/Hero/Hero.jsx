@@ -26,17 +26,18 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.span className="hero-badge" variants={itemVariants}>
-          Full Stack Developer
-        </motion.span>
-
         <motion.h1 className="hero-title" variants={itemVariants}>
           Esteban <span>Eslava</span>
         </motion.h1>
 
+        <motion.span className="hero-badge" variants={itemVariants}>
+          Full Stack Developer
+        </motion.span>
+
         <motion.p className="hero-text" variants={itemVariants}>
-          Construyo experiencias web completas con pasión por el código limpio,
-          el diseño cuidado y soluciones funcionales.
+          Construyo aplicaciones web modernas y escalables con React, Node.js y
+          MongoDB. Me enfoco en crear experiencias rápidas, funcionales y bien
+          diseñadas.
         </motion.p>
 
         <motion.div className="hero-buttons" variants={itemVariants}>
@@ -74,6 +75,7 @@ const Hero = () => {
             <Mail size={20} />
           </a>
         </motion.div>
+        <span className="hero__status">🟢 Open to work</span>
       </motion.div>
 
       <motion.div

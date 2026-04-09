@@ -94,6 +94,12 @@
   border-color: #d4af37;
 }
 
+.hero__status {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
 .hero-socials {
   display: flex;
   justify-content: center;
